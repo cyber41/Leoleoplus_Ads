@@ -1,0 +1,292 @@
+/* Place your styles here */
+*, input, button{
+	font-family:"Roboto Slab";
+}
+
+.ad{
+	width:300px;
+	height:250px;
+	overflow:hidden; /* elements won’t spill outside of the ad */
+	position:relative; /* make it easier to position elements */
+	    background-color: #414041;
+	color:#3A3A3A;
+}
+
+.h1-background{
+    color: white;
+    background-color: #f7a72d;
+    background-image: url(gradu.jpg);
+    background-size: cover;
+    /* padding-top: 20px; */
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    text-align: center;
+    height: 179px;
+}
+
+h1 , .dropper{
+	position:relative;
+  font-size: 32px;
+	
+  -moz-animation-name: dropHeader;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-duration: 0.5s;
+
+  -webkit-animation-name: dropHeader;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-duration: 0.5s;
+
+  animation-name: dropHeader;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.5s;
+    
+    padding: 1em;
+}
+
+@-moz-keyframes dropHeader {
+    0% {
+        -moz-transform: translateY(50px);
+        opacity :0;
+    }
+    100% {
+        -moz-transform: translateY(0);
+        opacity:1;
+    }
+}
+@-webkit-keyframes dropHeader {
+    0% {
+        -webkit-transform: translateY(50px);
+        opacity :0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        opacity:1;
+    }
+}
+@keyframes dropHeader {
+    0% {
+        transform: translateY(50px);
+        opacity :0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity :1;
+    }
+}
+
+.company-logo
+{
+	width:50px;
+	position:relative;
+	top:5px;
+}
+
+button{
+    padding: 10px 20px;
+     float: right; 
+    font-size: 25px;
+    /* margin-right: 110px; */
+        background-color: #ef3d38;
+    border: none;
+    color: white;
+    margin-right: 10px;
+    margin-top: 10px;
+    /* display: block; */ 
+    
+	-moz-animation-name: raiseButton;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: linear;
+  -moz-animation-duration: .7s;
+
+
+  -webkit-animation-name: raiseButton;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: .7s;
+
+
+  animation-name: raiseButton;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;	
+  animation-duration: .7s;
+ 
+}
+
+.company-logo {
+   width: 57px;
+    position: relative;
+    top: 0px;
+    padding: 7px;
+}
+
+@-moz-keyframes raiseButton {
+    0% {
+      -moz-transform: translateY(100px);
+      opacity :0;
+    }
+    50%{
+    	-moz-transform: translateY(100px);
+    	opacity :0;
+    }
+    100% {
+      -moz-transform: translateY(0);
+      opacity:1;
+    }
+}
+@-webkit-keyframes raiseButton {
+    0% {
+        -webkit-transform: translateY(100px);
+        opacity :0;
+    }
+    50%{
+    	-webkit-transform: translateY(100px);
+    	opacity :0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        opacity:1;
+    }
+}
+@keyframes raiseButton {
+    0% {
+        transform: translateY(100px);
+        opacity :0;
+    }
+    50%{
+    	transform: translateY(100px);
+    	opacity :0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity :1;
+    }
+}
+
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  animation-duration: .75s;
+}
+/* Animations */
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+.bounceInDown {
+  animation-name: bounceInDown;
+}
+
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+@keyframes bounceOut {
+  20% {
+    transform: scale3d(.9, .9, .9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+}
+
+.bounceOut {
+  animation-name: bounceOut;
+}
+
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  animation-name: bounceIn;
+}
